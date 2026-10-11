@@ -10,3 +10,16 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice() {
+    humanChoice = prompt("What's your move: Rock, Paper or Scissors?");
+    if (humanChoice == "Rock") {
+        return "Rock";
+    } else if (humanChoice == "Paper") {
+        return "Paper";
+    } else {
+        return "Scissors";
+    }
+}
+
+console.log(getHumanChoice());
