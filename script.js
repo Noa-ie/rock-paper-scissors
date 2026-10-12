@@ -9,20 +9,16 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
-
 function getHumanChoice() {
-    humanChoice = prompt("What's your move: Rock, Paper or Scissors?");
-    if (humanChoice == "Rock") {
+    move = prompt("What's your move: Rock, Paper or Scissors?");
+    if (move == "Rock") {
         return "Rock";
-    } else if (humanChoice == "Paper") {
+    } else if (move == "Paper") {
         return "Paper";
     } else {
         return "Scissors";
     }
 }
-
-console.log(getHumanChoice());
 
 let humanScore = 0;
 let computerScore = 0;
