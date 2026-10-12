@@ -11,9 +11,10 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     move = prompt("What's your move: Rock, Paper or Scissors?");
-    if (move == "Rock") {
+    move = move.toLowerCase();
+    if (move == "rock") {
         return "Rock";
-    } else if (move == "Paper") {
+    } else if (move == "paper") {
         return "Paper";
     } else {
         return "Scissors";
