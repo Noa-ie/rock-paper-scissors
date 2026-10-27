@@ -41,7 +41,7 @@ function playGame() {
 
         } else {
             ++computerScore;
-            return `You lose! ${computerSelection} beats ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`
+            return `You lose! ${computerSelection} beats ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
         }
         
     }
