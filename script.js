@@ -27,21 +27,21 @@ function playGame() {
 
     function playRound(humanChoice, computerChoice) {
         if (humanChoice == computerChoice) {
-            return `Both drew ${humanChoice}! Tie!`;
+            return `Tie! Both drew ${humanChoice}.`;
 
         } else if (humanChoice == "rock" && computerChoice == "Scissors") {
             ++humanScore;
-            return `Rock beats Scissors! You win!\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
+            return `You win! Rock beats Scissors.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
         } else if (humanChoice == "paper" && computerChoice == "Rock") {
             ++humanScore;
-            return `Paper beats Rock! You win!\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
+            return `You win! Paper beats Rock!\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
         } else if (humanChoice == "scissors" && computerChoice == "Paper") {
             ++humanScore;
-            return `Scissors beats Paper! You win!\nHuman score = ${humanScore}\nComputer score = ${computer}`;
+            return `You win! Scissors beats Paper!\nHuman score = ${humanScore}\nComputer score = ${computer}`;
 
         } else {
             ++computerScore;
-            return `${computerChoice} beats ${humanChoice}! You lose!\nHuman score = ${humanScore}\nComputer score = ${computerScore}`
+            return `You lose! ${computerChoice} beats ${humanChoice}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`
         }
     }
 
