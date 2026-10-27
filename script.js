@@ -37,7 +37,7 @@ function playGame() {
             return `You win! Paper beats Rock!\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
         } else if (humanSelection == "scissors" && computerSelection == "Paper") {
             ++humanScore;
-            return `You win! Scissors beats Paper!\nHuman score = ${humanScore}\nComputer score = ${computer}`;
+            return `You win! Scissors beats Paper!\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
 
         } else {
             ++computerScore;
