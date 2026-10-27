@@ -26,23 +26,24 @@ function playGame() {
     let computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
-        if (humanChoice == computerChoice) {
-            return `Tie! Both drew ${humanChoice}.`;
+        if (humanSelection == computerSelection) {
+            return `Tie! Both drew ${humanSelection}.`;
 
-        } else if (humanChoice == "rock" && computerChoice == "Scissors") {
+        } else if (humanSelection == "rock" && computerSelection == "Scissors") {
             ++humanScore;
             return `You win! Rock beats Scissors.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
-        } else if (humanChoice == "paper" && computerChoice == "Rock") {
+        } else if (humanSelection == "paper" && computerSelection == "Rock") {
             ++humanScore;
             return `You win! Paper beats Rock!\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
-        } else if (humanChoice == "scissors" && computerChoice == "Paper") {
+        } else if (humanSelection == "scissors" && computerSelection == "Paper") {
             ++humanScore;
             return `You win! Scissors beats Paper!\nHuman score = ${humanScore}\nComputer score = ${computer}`;
 
         } else {
             ++computerScore;
-            return `You lose! ${computerChoice} beats ${humanChoice}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`
+            return `You lose! ${computerSelection} beats ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`
         }
+        
     }
 
     const humanSelection = getHumanChoice();
