@@ -8,7 +8,6 @@ function getComputerChoice() {
         return "Scissors";
     }
 }
-console.log(getComputerChoice());
 
 function getHumanChoice() {
     move = prompt("What's your move: Rock, Paper or Scissors?");
@@ -27,19 +26,29 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     if (humanSelection == computerSelection) {
+        console.log("humanSelection = ", humanSelection);
+        console.log("computerSelection = ", computerSelection);
         return `Tie! Both drew ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
 
     } else if (humanSelection == "rock" && computerSelection == "Scissors") {
+        console.log("humanSelection = ", humanSelection);
+        console.log("computerSelection = ", computerSelection);
         ++humanScore;
         return `You win! Rock beats Scissors.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
     } else if (humanSelection == "paper" && computerSelection == "Rock") {
+        console.log("humanSelection = ", humanSelection);
+        console.log("computerSelection = ", computerSelection);
         ++humanScore;
         return `You win! Paper beats Rock.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
     } else if (humanSelection == "scissors" && computerSelection == "Paper") {
+        console.log("humanSelection = ", humanSelection);
+        console.log("computerSelection = ", computerSelection);
         ++humanScore;
         return `You win! Scissors beats Paper.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
 
     } else {
+        console.log("humanSelection = ", humanSelection);
+        console.log("computerSelection = ", computerSelection);
         ++computerScore;
         return `You lose! ${computerSelection} beats ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
     }
