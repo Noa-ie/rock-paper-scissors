@@ -25,6 +25,8 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
+    let roundCount = 0;
+
     function playRound(humanChoice, computerChoice) {
         if (humanSelection == computerSelection) {
             console.log("humanSelection = ", humanSelection);
@@ -54,6 +56,9 @@ function playGame() {
             return `You lose! ${computerSelection} beats ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
         }
     }
+
+    ++roundCount;
+    console.log("Round count: ", roundCount);
     
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
