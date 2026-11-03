@@ -30,17 +30,17 @@ function playRound(humanChoice, computerChoice) {
         console.log("computerSelection = ", computerSelection);
         return `Tie! Both drew ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
 
-    } else if (humanSelection == "rock" && computerSelection == "Scissors") {
+    } else if (humanSelection == "Rock" && computerSelection == "Scissors") {
         console.log("humanSelection = ", humanSelection);
         console.log("computerSelection = ", computerSelection);
         ++humanScore;
         return `You win! Rock beats Scissors.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
-    } else if (humanSelection == "paper" && computerSelection == "Rock") {
+    } else if (humanSelection == "Paper" && computerSelection == "Rock") {
         console.log("humanSelection = ", humanSelection);
         console.log("computerSelection = ", computerSelection);
         ++humanScore;
         return `You win! Paper beats Rock.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
-    } else if (humanSelection == "scissors" && computerSelection == "Paper") {
+    } else if (humanSelection == "Scissors" && computerSelection == "Paper") {
         console.log("humanSelection = ", humanSelection);
         console.log("computerSelection = ", computerSelection);
         ++humanScore;
