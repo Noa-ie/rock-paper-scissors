@@ -21,40 +21,44 @@ function getHumanChoice() {
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
-    if (humanSelection == computerSelection) {
-        console.log("humanSelection = ", humanSelection);
-        console.log("computerSelection = ", computerSelection);
-        return `Tie! Both drew ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
-
-    } else if (humanSelection == "Rock" && computerSelection == "Scissors") {
-        console.log("humanSelection = ", humanSelection);
-        console.log("computerSelection = ", computerSelection);
-        ++humanScore;
-        return `You win! Rock beats Scissors.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
-    } else if (humanSelection == "Paper" && computerSelection == "Rock") {
-        console.log("humanSelection = ", humanSelection);
-        console.log("computerSelection = ", computerSelection);
-        ++humanScore;
-        return `You win! Paper beats Rock.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
-    } else if (humanSelection == "Scissors" && computerSelection == "Paper") {
-        console.log("humanSelection = ", humanSelection);
-        console.log("computerSelection = ", computerSelection);
-        ++humanScore;
-        return `You win! Scissors beats Paper.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
-
-    } else {
-        console.log("humanSelection = ", humanSelection);
-        console.log("computerSelection = ", computerSelection);
-        ++computerScore;
-        return `You lose! ${computerSelection} beats ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
+    function playRound(humanChoice, computerChoice) {
+        if (humanSelection == computerSelection) {
+            console.log("humanSelection = ", humanSelection);
+            console.log("computerSelection = ", computerSelection);
+            return `Tie! Both drew ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
+    
+        } else if (humanSelection == "Rock" && computerSelection == "Scissors") {
+            console.log("humanSelection = ", humanSelection);
+            console.log("computerSelection = ", computerSelection);
+            ++humanScore;
+            return `You win! Rock beats Scissors.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
+        } else if (humanSelection == "Paper" && computerSelection == "Rock") {
+            console.log("humanSelection = ", humanSelection);
+            console.log("computerSelection = ", computerSelection);
+            ++humanScore;
+            return `You win! Paper beats Rock.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
+        } else if (humanSelection == "Scissors" && computerSelection == "Paper") {
+            console.log("humanSelection = ", humanSelection);
+            console.log("computerSelection = ", computerSelection);
+            ++humanScore;
+            return `You win! Scissors beats Paper.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
+    
+        } else {
+            console.log("humanSelection = ", humanSelection);
+            console.log("computerSelection = ", computerSelection);
+            ++computerScore;
+            return `You lose! ${computerSelection} beats ${humanSelection}.\nHuman score = ${humanScore}\nComputer score = ${computerScore}`;
+        }
     }
+    
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    console.log(playRound(humanSelection, computerSelection));
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-console.log(playRound(humanSelection, computerSelection));
+console.log(playGame());
